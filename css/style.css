@@ -8,7 +8,7 @@
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -184,7 +184,7 @@ figure {
 
 .fh5co-cover .display-t {
   display: table;
-  height: 800px;
+  height: 500px;
   width: 100%;
   position: relative;
   z-index: 2;
