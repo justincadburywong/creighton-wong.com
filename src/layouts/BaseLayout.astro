@@ -32,6 +32,7 @@ const {
   footerTitle,
   footerText,
 } = Astro.props as Props;
+const heroWebp = heroImage.replace(/\.(jpe?g|png)$/i, '.webp');
 ---
 
 <!doctype html>
@@ -65,7 +66,7 @@ const {
       </header>
 
       <main>
-        <section class="hero" style={`--hero-image: url(${heroImage})`}>
+        <section class="hero" style={`--hero-image: image-set(url(${heroWebp}) type('image/webp'), url(${heroImage}) type('image/jpeg'))`}>
           <div class="hero__overlay"></div>
           <div class="hero__content">
             <p class="hero__kicker">{heroKicker}</p>

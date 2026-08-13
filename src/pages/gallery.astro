@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ResponsiveImage from '../components/ResponsiveImage.astro';
 
 const nav = [
   { href: '/index.html', label: 'Home' },
@@ -108,7 +109,7 @@ const columns = [
         <div class="gallery-stack">
           {column.map((file) => (
             <a class="gallery-card" href={`/images/gallery/${file}`}>
-              <img loading="lazy" decoding="async" src={`/images/gallery/${file}`} alt="" />
+              <ResponsiveImage src={`/images/gallery/${file}`} alt="" loading="lazy" />
             </a>
           ))}
         </div>
