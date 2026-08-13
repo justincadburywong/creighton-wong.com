@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const nav = [
+  { href: '/index.html', label: 'Home' },
+  { href: '/groom-bride.html', label: 'Groom & Bride', active: true },
+  { href: '/when-where.html', label: 'When & Where' },
+  { href: '/gallery.html', label: 'Gallery' },
+  { href: '/index.html#fh5co-started', label: 'Registry' },
+];
+---
+
+<BaseLayout
+  title="Groom &amp; Bride | Creighton-Wong"
+  description="Groom and bride page for the Creighton-Wong wedding site"
+  heroImage="/images/cover_bg_1.jpg"
+  heroKicker="Nuptial"
+  heroTitle="Groom & Bride"
+  nav={nav}
+  footerTitle="Lynda & Justin"
+  footerText="A simple wedding site for a very good day."
+>
+  <section class="section" id="fh5co-groom-bride">
+    <div class="section-heading">
+      <h2>Groom &amp; Bride</h2>
+    </div>
+
+    <div class="couple-grid couple">
+      <article class="couple-card">
+        <div class="couple-card__media">
+          <img src="/images/groom.jpg" alt="Groom" />
+        </div>
+        <div class="couple-card__body">
+          <h3>Jack Wood</h3>
+          <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius. Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+        </div>
+      </article>
+
+      <article class="couple-card">
+        <div class="couple-card__media">
+          <img src="/images/bride.jpg" alt="Bride" />
+        </div>
+        <div class="couple-card__body">
+          <h3>Rose Thomas</h3>
+          <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius. Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--soft" id="fh5co-started">
+    <div class="section-heading">
+      <h2>Are You Attending?</h2>
+      <p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
+    </div>
+
+    <div class="form-card">
+      <form class="form-row">
+        <input type="text" name="name" placeholder="Name" aria-label="Name" />
+        <input type="email" name="email" placeholder="Email" aria-label="Email" />
+        <button type="submit">I am Attending</button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
