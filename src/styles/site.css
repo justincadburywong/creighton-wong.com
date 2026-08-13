@@ -38,6 +38,10 @@ img {
   height: auto;
 }
 
+picture {
+  display: block;
+}
+
 .site-shell {
   min-height: 100vh;
 }
@@ -276,7 +280,7 @@ img {
   border-radius: 40px;
   overflow: hidden;
   color: #fff;
-  background-image: linear-gradient(180deg, rgba(37, 18, 26, 0.18), rgba(37, 18, 26, 0.55)), url('/images/cover_bg_3.jpg');
+  background-image: linear-gradient(180deg, rgba(37, 18, 26, 0.18), rgba(37, 18, 26, 0.55)), image-set(url('/images/cover_bg_3.webp') type('image/webp'), url('/images/cover_bg_3.jpg') type('image/jpeg'));
   background-size: cover;
   background-position: center;
 }

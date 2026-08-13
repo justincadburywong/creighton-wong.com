@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ResponsiveImage from '../components/ResponsiveImage.astro';
 
 const nav = [
   { href: '/index.html', label: 'Home' },
@@ -29,7 +30,7 @@ const nav = [
       <div class="event-grid">
         <article class="event-card">
           <div class="event-card__image">
-            <img src="/images/wed-ceremony.jpg" alt="Wedding ceremony" />
+            <ResponsiveImage src="/images/wed-ceremony.jpg" alt="Wedding ceremony" loading="eager" />
           </div>
           <div class="event-card__body">
             <h3>Wedding Ceremony</h3>
@@ -40,7 +41,7 @@ const nav = [
 
         <article class="event-card">
           <div class="event-card__image">
-            <img src="/images/wed-party.jpg" alt="Wedding party" />
+            <ResponsiveImage src="/images/wed-party.jpg" alt="Wedding party" loading="eager" />
           </div>
           <div class="event-card__body">
             <h3>Wedding Party</h3>
