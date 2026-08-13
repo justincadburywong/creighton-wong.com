@@ -1,13 +1,12 @@
 {
-  "name": "creighton-wong.com",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
-  },
-  "devDependencies": {
-    "astro": "^5.0.0"
+"devDependencies": {
+  "gulp": "latest",
+  "gulp-util": "latest",
+  "gulp-sass": "latest",
+  "gulp-uglify": "latest",
+  "gulp-concat": "latest",
+  "gulp-connect": "latest",
+  "gulp-rename": "latest",
+  "gulp-order": "latest"
   }
 }
