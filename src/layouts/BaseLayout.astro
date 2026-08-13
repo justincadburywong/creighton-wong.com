@@ -53,7 +53,11 @@ const heroWebp = heroImage.replace(/\.(jpe?g|png)$/i, '.webp');
       <header class="site-header">
         <div class="site-header__inner">
           <a class="site-logo" href="/index.html">Lynda &amp; Justin</a>
-          <nav class="site-nav" aria-label="Primary">
+          <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="site-nav-toggle__icon" aria-hidden="true"></span>
+            <span class="site-nav-toggle__label">Menu</span>
+          </button>
+          <nav class="site-nav" id="primary-navigation" aria-label="Primary">
             <ul>
               {nav.map((item) => (
                 <li class={item.active ? 'is-active' : undefined}>
@@ -86,5 +90,23 @@ const heroWebp = heroImage.replace(/\.(jpe?g|png)$/i, '.webp');
         </div>
       </footer>
     </div>
+    <script is:inline>
+      const button = document.querySelector('.site-nav-toggle');
+      const nav = document.querySelector('.site-nav');
+
+      if (button && nav) {
+        button.addEventListener('click', () => {
+          const open = nav.classList.toggle('is-open');
+          button.setAttribute('aria-expanded', String(open));
+        });
+
+        nav.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            nav.classList.remove('is-open');
+            button.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    </script>
   </body>
   </html>

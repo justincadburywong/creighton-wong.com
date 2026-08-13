@@ -74,6 +74,44 @@ picture {
   padding: 1rem 0;
 }
 
+.site-nav-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 2.75rem;
+  border: 1px solid rgba(216, 90, 130, 0.18);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--accent);
+  padding: 0.55rem 0.9rem;
+  font: inherit;
+}
+
+.site-nav-toggle__icon {
+  position: relative;
+  width: 1.1rem;
+  height: 0.1rem;
+  background: currentColor;
+}
+
+.site-nav-toggle__icon::before,
+.site-nav-toggle__icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 1.1rem;
+  height: 0.1rem;
+  background: currentColor;
+}
+
+.site-nav-toggle__icon::before {
+  top: -0.35rem;
+}
+
+.site-nav-toggle__icon::after {
+  top: 0.35rem;
+}
+
 .site-logo {
   font-family: 'Montez', cursive;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
@@ -402,8 +440,36 @@ picture {
   }
 
   .site-header__inner {
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .site-nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .site-nav {
+    display: none;
+    width: 100%;
+    order: 3;
+  }
+
+  .site-nav.is-open {
+    display: block;
+  }
+
+  .site-nav ul {
     flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    padding: 0.25rem 0 0.5rem;
+  }
+
+  .site-nav a {
+    width: 100%;
+    justify-content: center;
   }
 
   .hero {
